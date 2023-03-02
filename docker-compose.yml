@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+        db:
+           image: "postgres:14"
+           container_name: "lfdpostgres14-1"
+           environment:
+               - POSTGRES_USER=lfdpsql
+               - POSTGRES_PASSWORD=Psql12T
+               - POSTGRES_DB=lfd
+           ports:
+               - 5432:5432
+           deploy:
+             resources:
+                limits:
+                  cpus: '2.0'
+                  memory: '3072M'
