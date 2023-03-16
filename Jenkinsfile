@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'myhost'
+    }
+
+  }
   stages {
     stage('Code Checkout ') {
       steps {
